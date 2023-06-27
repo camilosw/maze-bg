@@ -34,8 +34,8 @@ export const SubTile = ({ id, tilePosition }: Props) => {
       aria-hidden="true"
       role="img"
       className="iconify iconify--logos"
-      width="100"
-      height="100"
+      width="37mm"
+      height="37mm"
       preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 100 100"
     >

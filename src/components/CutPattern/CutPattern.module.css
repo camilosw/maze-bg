@@ -1,0 +1,11 @@
+.cutArea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: #ffffff;
+}
+.pathCut {
+  stroke: #000000;
+  stroke-width: 0.25;
+  fill-opacity: 0;
+}

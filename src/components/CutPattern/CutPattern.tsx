@@ -6,6 +6,7 @@ type Props = {
   elementWidth: number; // width in mm
   elementHeight: number; // height in mm
   children: React.ReactNode;
+  debug?: boolean;
 };
 
 export const CutPattern = ({
@@ -14,6 +15,7 @@ export const CutPattern = ({
   elementWidth,
   elementHeight,
   children,
+  debug = false,
 }: Props) => {
   const totalWidth = columns * elementWidth;
   const totalHeight = rows * elementHeight;
@@ -53,13 +55,15 @@ export const CutPattern = ({
         }`}
       >
         <path d={path} className={cn.pathCut} />
-        <rect
-          x={`${cutAreaWidth * 0.75}`}
-          y={`${cutAreaWidth * 0.75}`}
-          width={`${totalWidth + cutAreaWidth * 0.5}`}
-          height={`${totalHeight + cutAreaWidth * 0.5}`}
-          className={cn.path}
-        />
+        {!debug && (
+          <rect
+            x={`${cutAreaWidth * 0.75}`}
+            y={`${cutAreaWidth * 0.75}`}
+            width={`${totalWidth + cutAreaWidth * 0.5}`}
+            height={`${totalHeight + cutAreaWidth * 0.5}`}
+            className={cn.path}
+          />
+        )}
       </svg>
       <div style={{ padding: `${cutAreaWidth}mm` }}>{children}</div>
     </div>

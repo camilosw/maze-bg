@@ -6,10 +6,10 @@ export const HatchPattern = () => {
           id="diagonalHatch"
           patternUnits="userSpaceOnUse"
           width="4"
-          height="8"
+          height="7.1"
           patternTransform="rotate(-45 0 0)"
         >
-          <path d="M 0,0 l 4,0" stroke="#000000" stroke-width=".25" />
+          <path d="M 0,0 l 4,0" stroke="#000000" strokeWidth=".25" />
         </pattern>
       </defs>
       <rect
@@ -18,7 +18,7 @@ export const HatchPattern = () => {
         width="100"
         height="100"
         stroke="#000000"
-        stroke-width="0"
+        strokeWidth="0"
         fill="url(#diagonalHatch)"
       />
     </>
